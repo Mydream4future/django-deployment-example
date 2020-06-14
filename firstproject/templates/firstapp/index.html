@@ -1,0 +1,36 @@
+<!-- Codes for relative urls with templates -->
+<!-- <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>WELCOME TO INDEX!</h1>
+  </body>
+</html> -->
+<!-- Codes for template with inheritance -->
+<!DOCTYPE html>
+
+{% extends "firstapp/base.html" %}
+{% block body_block %}
+{% load my_extras %}
+  <h1>WELCOME TO INDEX!</h1>
+  <h2>THIS PAGE IS ADMIN PAGE</h2>
+
+  <!-- To add extra text to the index -->
+  <!-- <h1>{{ text }}</h1>
+  <h1>{{ number }}</h1> -->
+
+  <!-- To add filter for upper case text -->
+  <!-- <h1>{{ text|upper }}</h1>
+  <h1>{{ number }}</h1> -->
+
+  <!-- To add filter for upper case text and add 99 to the number -->
+  <!-- <h1>{{ text|upper }}</h1>
+  <h1>{{ number|add:"99" }}</h1> -->
+
+  <!-- To add my own registered filter -->
+  <h1>{{ text|cut:'world' }}</h1>
+  <h1>{{ number|add:'99' }}</h1>
+{% endblock %}
